@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib")))
+
+require "insinuate"
+
+unless Insinuate::STATES.include?(ARGV.first)
+  abort("USAGE: #$0 " + Insinuate::STATES.join("|"))
+end
+
+Insinuate.send(ARGV.first)

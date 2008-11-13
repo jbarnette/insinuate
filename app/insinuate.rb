@@ -1,6 +1,7 @@
 require "webrick"
 
 module Insinuate
+  # NOTE: this is copied from ../lib/insinuate.rb
   STATES = %w(unknown bad iffy good)
 end
 

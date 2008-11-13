@@ -1,0 +1,7 @@
+History.txt
+Manifest.txt
+README.txt
+Rakefile
+bin/insinuate
+lib/insinuate.rb
+test/test_insinuate.rb

@@ -4,15 +4,30 @@
 
 == DESCRIPTION:
 
-Two bits of delicious information.
+Two bits of delicious information. Insinuate puts a tiny little colored
+circle on your desktop and lets you change its color. That's it.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* FOUR possible states! Unknown, bad, iffy, and good.
+* Awesome, untested code!
+* An ugly, default app icon!
+* Pointless use of Webrick!
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+From the command line:
+
+  $ insinuate unknown|iffy|good|bad
+  
+From Ruby:
+
+  require "rubygems"
+  require "insinuate"
+  
+  Insinuate.good
+
+The app will be launched the first time you insinuate anything.
 
 == REQUIREMENTS:
 

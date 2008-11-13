@@ -11,9 +11,12 @@ module Insinuate
   end
 end
 
-Hoe.new("insinuate", Insinuate::VERSION) do |p|
+HOE = Hoe.new("insinuate", Insinuate::VERSION) do |p|
   p.developer("John Barnette", "jbarnette@rubyforge.org")
+  p.spec_extras = { :extensions => ["Rakefile"] }
 end
+
+HOE.spec.platform = "universal-darwin-9"
 
 namespace :app do
   task :build do
@@ -23,10 +26,17 @@ namespace :app do
   
   task :clean do
     Dir.chdir("app") { Insinuate.xcodebuild(:clean) }
+    rm_rf "bin/Insinuate.app"
   end
   
   task :rebuild => %w(clean build)
 end
 
 task :clean => "app:clean"
-Rake::Task[:package].prerequisites.unshift "app:build"
+
+# Evil evil hack.  Do not run tests when gem installs
+if ENV['RUBYARCHDIR']
+  prereqs = Rake::Task[:default].prerequisites
+  prereqs.clear
+  prereqs << "app:build"
+end

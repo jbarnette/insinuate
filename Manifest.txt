@@ -16,3 +16,4 @@ app/rb_main.rb
 app/unknown.tif
 bin/insinuate
 lib/insinuate.rb
+lib/insinuate/autotest.rb

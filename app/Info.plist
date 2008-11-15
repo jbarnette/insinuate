@@ -20,6 +20,8 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSUIElement</key>
+	<string>1</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.geeksomnia.insinuate</string>
 	<key>CFBundleShortVersionString</key>

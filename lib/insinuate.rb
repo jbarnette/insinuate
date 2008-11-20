@@ -4,7 +4,7 @@ module Insinuate
   VERSION = "0.0.0"
   
   # NOTE: this is manually copied to ../app/insinuate.rb
-  STATES = %w(unknown bad iffy good)
+  STATES = %w(unknown bad iffy good off)
 
   STATES.each do |state|
     module_eval "def self.#{state}; insinuate #{state.inspect}; end"    

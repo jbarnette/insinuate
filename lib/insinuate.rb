@@ -14,7 +14,7 @@ module Insinuate
   
   def self.insinuate(state)
     # professional software engineer at work
-    if `ps -ef | grep Insinuate.app | grep -v grep`.empty?
+    if ps.empty?
       `open #{APP}` 
       sleep 1
     end
@@ -22,9 +22,15 @@ module Insinuate
     open("http://localhost:31313/#{state}") {}    
   end
   
-  def self.off
-    # it worked so well for him
-    pid = `ps -ef | grep Insinuate.app | grep -v grep`.split(' ')[1]
-    Process.kill('TERM', pid.to_i) if pid
+  class << self
+    def off
+      pid = ps.split(' ')[1]
+      Process.kill('TERM', pid.to_i) if pid
+    end
+    
+    private
+    def ps
+      `ps -ef | grep Insinuate.app | grep -v grep`
+    end
   end
 end

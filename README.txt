@@ -37,6 +37,12 @@ The app will be launched the first time you insinuate anything.
 
 * sudo gem install insinuate
 
+== INSTALL FROM SOURCE:
+
+* git clone git://github.com/jbarnette/insinuate.git
+* cd insinuate
+* sudo rake install_gem
+
 == LICENSE:
 
 (The MIT License)

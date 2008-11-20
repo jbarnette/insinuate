@@ -21,4 +21,10 @@ module Insinuate
 
     open("http://localhost:31313/#{state}") {}    
   end
+  
+  def self.off
+    # it worked so well for him
+    pid = `ps -ef | grep Insinuate.app | grep -v grep`.split(' ')[1]
+    Process.kill('TERM', pid.to_i) if pid
+  end
 end

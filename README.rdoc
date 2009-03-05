@@ -1,53 +1,37 @@
-= insinuate
+= Insinuate
 
-* http://github.com/jbarnette/insinuate
-
-== DESCRIPTION:
-
-Two bits of delicious information. Insinuate puts a tiny little colored
-circle on your desktop and lets you change its color. That's it.
-
-== FEATURES/PROBLEMS:
+Two bits of delicious information. Insinuate puts a little colored
+circle on your desktop and lets you change its color.
 
 * FOUR possible states! Unknown, bad, iffy, and good.
 * Awesome, untested code!
-* An ugly, default app icon!
+* Ugly graphics!
 * Pointless use of Webrick!
 
-== SYNOPSIS:
+== Examples
 
 From the command line:
 
-  $ insinuate unknown|iffy|good|bad
-  
+    $ insinuate unknown|iffy|good|bad|off
+
 From Ruby:
 
-  require "rubygems"
-  require "insinuate"
-  
-  Insinuate.good
+    require "rubygems"
+    require "insinuate"
+
+    Insinuate.good
 
 The app will be launched the first time you insinuate anything.
 
-== REQUIREMENTS:
+== Installation
 
-* A Mac. RubyCocoa.
+You need a Mac with RubyCocoa.
 
-== INSTALL:
+    $ sudo gem install insinuate
 
-* sudo gem install insinuate
+== License
 
-== INSTALL FROM SOURCE:
-
-* git clone git://github.com/jbarnette/insinuate.git
-* cd insinuate
-* sudo rake install_gem
-
-== LICENSE:
-
-(The MIT License)
-
-Copyright (c) 2008 John Barnette <jbarnette@rubyforge.org>
+Copyright 2008-2009 John Barnette (jbarnette@rubyforge.org)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

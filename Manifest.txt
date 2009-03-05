@@ -1,6 +1,6 @@
-History.txt
+CHANGELOG.rdoc
 Manifest.txt
-README.txt
+README.rdoc
 Rakefile
 app/English.lproj/InfoPlist.strings
 app/English.lproj/MainMenu.nib/designable.nib
